@@ -1,0 +1,519 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap'); /* font ke liye hai ye line  */
+
+/* === GLOBAL custom curser ke liye  === */
+
+:root {
+  --custom-pointer: url('image/custompointer.png'), auto;
+  --custom-default-cursor: url('image/customdefaultcurser.png') 4 4, auto;
+}
+  
+
+/* ye main body ke liye hai */
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Orbitron', sans-serif;;
+      background-color:  #42005a;
+      color: #3fffd3;;
+      min-height: 100%;
+      cursor: var( --custom-default-cursor);
+    }
+
+/* ye border ke liye hai */
+
+.border-wrapper {
+  margin: 2rem;
+  border: 3px solid #3fffd3;
+  padding: 1rem;
+  border-radius: 4px;
+  width: calc(100% - 40px);
+  height: calc(auto - 40px);  
+  position: relative; /* 👈 Yeh line add karo */
+  z-index: 1;         /* 👈 Yeh bhi add karo */
+}
+
+
+/* noice efftect ke liye */
+
+
+.noise-container {
+  opacity: 1;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;    
+  background-image: url(https://marvinx.com/assets/images/noise.png);
+  animation: noise-animation 1s steps(10) infinite;
+  filter: contrast(2);
+  z-index: 0; /* 👈 Yeh line add karo */
+}
+
+
+@keyframes noise-animation { 
+  100% {
+    background-position: -100% 100%;
+  }
+}
+
+
+/* iske niche bala section pura button ke liye hai */
+
+  .icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 2rem;
+}
+
+/* icon ko left aur right me rakhne ke liye ye line hai */
+
+.left-icons {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.5rem, 4vw, 4rem);
+  font-size: clamp(0.7rem, 5vw, 5rem);
+}
+
+.right-icons {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.5rem, 4vw, 4rem);
+  flex-wrap: wrap;
+}
+
+/* logo ke liye */
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #3fffd3;
+  text-decoration: none; /* Yeh line underline hata degi */
+  font-family: 'Orbitron', sans-serif;
+}
+
+
+.logo-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: clamp(0.7rem, 5vw, 5rem);
+  transition: transform 0.2s; 
+  
+  
+}
+
+.logo-item a {
+  transform: translateY(-2px) translateX(26px) rotate(0deg) scale(1.3);
+  font-size: clamp(0.7rem, 4vw, 4rem);
+  transition: transform 0.3s ease;
+  cursor: var(--custom-pointer); 
+}
+
+.logo-item:hover a {
+  transform: translateY(-2px) translateX(26px) rotate(-7deg) scale(1.3);
+  font-size: clamp(0.8rem, 5vw, 5rem);
+}
+
+/* about ke liye  */
+
+.about-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: clamp(0.7rem, 1.2vw, 1rem);
+  transition: transform 0.2s;
+ 
+ 
+}
+
+.about-item img {
+  width: clamp(30px, 10vw, 90px);
+  transition: transform 0.3s ease;
+  transform: rotate(-15deg) scale(1.3); 
+  cursor: var(--custom-pointer) !important; 
+}
+
+.about-item:hover img {
+  transform: rotate(-4deg) scale(1.3);
+  
+}
+
+.about-item span {
+  transform: translateY(-2px) translateX(26px) rotate(20deg) scale(1.3);
+  font-size: clamp(0.1rem, 1vw, 0.8rem);
+  transition: transform 0.3s ease;
+}
+
+.about-item:hover span {
+  transform: translateY(-5px) translateX(35px) rotate(35deg) scale(1.3);
+}
+
+/* work ke liye  */
+
+.work-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: clamp(0.7rem, 1.2vw, 1rem);
+  transition: transform 0.2s;
+ 
+ 
+}
+
+.work-item img {
+  width: clamp(30px, 10vw, 90px);
+  transition: transform 0.3s ease;
+  transform: rotate(-15deg) scale(1.3); 
+  cursor: var(--custom-pointer) !important;
+}
+
+.work-item:hover img {
+  transform: rotate(-4deg) scale(1.3);
+  
+}
+
+.work-item span {
+  transform:  translateY(-9px) translateX(29px) rotate(20deg) scale(1.3);
+  font-size: clamp(0.1rem, 1vw, 0.8rem);
+  transition: transform 0.3s ease;
+}
+
+.work-item:hover span {
+  transform: translateY(-10px) translateX(25px) rotate(0deg) scale(1.3);
+}
+
+
+/* archive ke liye  */
+
+.archive-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: clamp(0.3rem, 0.4vw, 0.9rem);
+  transition: transform 0.2s;
+ 
+ 
+}
+
+.archive-item img {
+  width: clamp(30px, 6vw, 60px);
+  transition: transform 0.3s ease;
+  transform: rotate(-15deg) scale(1.3); 
+  cursor: var(--custom-pointer) !important;
+}
+
+.archive-item:hover img {
+  transform: rotate(0deg) scale(1.3);
+  
+}
+
+.archive-item span {
+  transform: translateY(-5px) translateX(35px) rotate(35deg) scale(1.3);
+  font-size: clamp(0.1rem, 1vw, 0.8rem);
+  transition: transform 0.3s ease;
+}
+
+.archive-item:hover span {
+  transform: translateY(-15px) translateX(5px) rotate(0deg) scale(1.3);
+}
+
+/* thoughts ke liye  */
+
+.thoughts-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: clamp(0.7rem, 1.2vw, 1rem);
+  transition: transform 0.2s;
+ 
+ 
+}
+
+.thoughts-item img {
+  width: clamp(30px, 10vw, 90px);
+  transition: transform 0.3s ease;
+  transform: rotate(13deg) scale(1.3); 
+  cursor: var(--custom-pointer) !important;
+}
+
+.thoughts-item:hover img {
+  transform: rotate(0deg) scale(1.3);
+  
+}
+
+.thoughts-item span {
+  transform: translateY(-3px) translateX(32px) rotate(14deg) scale(1.3);
+  font-size: clamp(0.1rem, 1vw, 0.8rem);
+  transition: transform 0.3s ease;
+}
+
+.thoughts-item:hover span {
+  transform: translateY(-12px) translateX(2px) rotate(-0deg) scale(1.3);
+}
+
+
+/* mode ke liye  */
+
+.mode-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: clamp(0.7rem, 1.2vw, 1rem);
+  transition: transform 0.2s;
+ 
+ 
+}
+
+.mode-item img {
+  width: clamp(4px, 5vw, 40px);
+  transition: transform 0.3s ease;
+  transform: rotate(10deg) scale(1.3); 
+  cursor: var(--custom-pointer) !important;
+}
+
+.mode-item:hover img {
+  transform: rotate(-4deg) scale(1.3);
+  
+}
+
+.mode-item span {
+  transform: translateX(5px) translateY(-15px) rotate(2deg) scale(1.3);
+  font-size: clamp(0.1rem, 1vw, 0.8rem);
+  transition: transform 0.3s ease;
+}
+
+.mode-item:hover span {
+  transform:  translateX(10px) translateY(-15px) rotate(12deg) scale(1.3);
+}
+
+
+/* === DARK MODE === */
+body.dark-mode {
+  background-color:#42005a;
+  color: #3fffd3;
+}
+
+/* === LIGHT MODE === */
+body.light-mode {
+  background-color: #cef565;
+  color: #42005a;
+}
+
+/* Headings ke liye optional (agar JS se set nahi karna chahte ho) */
+body.light-mode h1,
+body.light-mode h2 {
+  color: #42005a;
+}
+
+
+
+/* horizontal line ke liye or unke bhich text ke liye ye line hai*/
+
+header {
+  border-bottom: 2px solid #3fffd3;;
+  border-top: 2px solid #3fffd3;; /* Added horizontal line above ABOUT */
+  padding: 2rem 1rem 1rem;
+  text-align: center;
+}
+
+
+
+header h1 {
+  margin: 20px 0;
+}
+
+header h2 {
+  margin: 20px 0;
+  font-size: clamp(2rem, 3vw, 4rem);
+}
+
+/* === text EFFECT HEADING 1=== */
+.name-effect {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(7rem, 25vw, 25rem);
+  -webkit-text-stroke: 1px #38f4c0;
+   color:  #42005a;
+  position: relative;
+  margin: 0;
+  letter-spacing: -0.005vw;
+}
+.name-effect::before {
+  content: "ABOUT";
+  position: absolute;
+  inset: 0;
+   color: #38f4c0;
+  transform: translate(1%, 4%);
+  z-index: -1;
+}
+
+
+
+/* image ke liye jo line hai wo niche wali hai */
+
+   .photo img {
+      width: clamp(100px, 20vw, 300px);
+      height: auto;
+      border: 2px dashed #3fffd3;;
+      filter: none; /*👈 Filter hata diya */
+      position: relative;
+      z-index: 2;
+
+    }
+
+
+ /* image ke right side me jo text hai uske liye ye line hai */
+
+    .container {
+      display: flex;
+      padding: 2rem;
+      gap: 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .bio {
+      font-size: clamp(1rem, 2vw, 2rem);
+      line-height: 1.8;
+      flex: 1;
+    }
+
+    
+   a {
+      color: #3fffd3;
+      text-decoration: underline;
+    }
+    a:hover {
+      color:#3fffd3;
+    } 
+
+ /* interview-section ke liye hai ye line     */
+
+    .interview-section {
+      padding: 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+
+    .interview-section h3 {
+      font-size: clamp(1.5rem, 3vw, 3rem);
+      border-bottom: 2px dashed #3fffd3;;
+      padding-bottom: 0.5rem;
+    }
+
+    .interview-section ul {
+      font-size: clamp(0.8rem, 1.5vw, 2rem);
+      list-style: none;
+      padding: 0;
+      margin-top: 1rem;
+    }
+
+    .interview-section li {
+      border-bottom: 1px dotted #3fffd3;;
+      padding: 0.5rem 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+.horizontal-line {
+  border: none;
+  border-top: 2px solid #3fffd3;
+  margin: clamp(1rem, 2vw, 3rem) 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;  
+  padding-right: 1rem;      
+  padding-top: 1rem;
+}
+
+.horizontal-line img {
+  width: clamp(2rem, 5vw, 5rem);
+  height: auto;
+  cursor: var(--custom-pointer) !important;
+}
+
+.horizontal-line img:hover {
+  transform: rotate(0deg) scale(1.3);
+  transition: transform 0.5s ease;
+}
+
+.horizontal-line span{
+  margin-top: 9%;
+  margin-left: 5%;
+  margin-bottom: 4%;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  color: #3fffd3;
+  transform: translateX(-5.2rem) translateY(3.8rem) rotate(0deg) scale(1.3);
+  cursor: var(--custom-pointer) !important;
+}
+
+.git {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #3fffd3;
+  text-decoration: none; /* Yeh line underline hata degi */
+  font-family: 'Orbitron', sans-serif;
+  position: relative;
+  z-index: 2;
+
+}
+
+/* === LIGHT MODE === */
+body.light-mode {
+  background-color:#cef565;
+  color: #4000f5;
+}
+
+body.light-mode .border-wrapper {
+  border-color: #4000f5;
+}
+
+body.light-mode header {
+  border-color: #4000f5;
+}
+
+
+body.light-mode .photo img {
+  border-color: #4000f5;
+}
+
+body.light-mode a {
+  color: #4000f5;
+}
+
+body.light-mode a:hover {
+  color: #4000f5;
+}
+
+body.light-mode h1,
+body.light-mode h2 {
+  color: #4000f5;
+}
+
+body.light-mode .name-effect {
+  color:#cef565;
+  -webkit-text-stroke: 1px  #4000f5;
+}
+body.light-mode .name-effect::before {
+  color:  #4000f5;
+}
+
+body.light-mode .interview-section h3 {
+  border-color: #4000f5;
+}
+
+body.light-mode .interview-section li {
+  border-color: #4000f5;
+}
+
+body.light-mode .horizontal-line {
+  border-color: #4000f5;
+}
+body.light-mode .horizontal-line span {
+  color: #4000f5;
+}
+
+
+

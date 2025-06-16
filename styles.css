@@ -1,0 +1,550 @@
+@font-face {
+  font-family: 'Orbitron';
+  src: url('fonts/Orbitron-VariableFont_wght.ttf') format('opentype');
+}
+
+/* === GLOBAL custom curser ke liye  === */
+
+:root {
+  --custom-pointer: url('image/custompointer.png'), auto;
+  --custom-default-cursor: url('image/customdefaultcurser.png') 4 4, auto;
+}
+
+/* === BODY === */
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #42005a;
+  color: #3fffd3;
+  font-family: 'Orbitron', 'Courier New', Courier, monospace;
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  cursor: var( --custom-default-cursor);
+
+}
+
+* {
+  cursor: var( --custom-default-cursor);
+}
+
+
+
+
+/* noice efftect ke liye */
+
+
+.noise-container {
+    opacity: 1;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;    
+    background-image: url(https://marvinx.com/assets/images/noise.png);
+    animation: noise-animation 1s steps(10) infinite;
+    filter: contrast(2);
+  
+}
+
+@keyframes noise-animation { 
+  100% {
+    background-position: -100% 100%;
+  }
+}
+
+
+/* === BORDER === */
+.border-wrapper {
+  position: relative;
+  width: calc(100% - 40px);
+  height: calc(100vh - 40px);
+  border: 3px solid #3fffd3;
+  border-radius: 10px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* === CONTAINER === */
+.container {
+  margin: 20px;
+  padding: 40px;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box;
+}
+
+/* === MENU === */
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 2rem;
+  cursor: var( --custom-default-cursor);
+}
+
+
+
+.left-menus {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.5rem, 8vw, 9rem);
+  font-size: clamp(0.7rem, 5vw, 5rem);
+}
+
+.right-menus {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.5rem, 8vw, 9rem);
+  flex-wrap: wrap;
+ 
+}
+
+
+
+/* about ke liye  */
+
+.about-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: clamp(0.7rem, 1.2vw, 1rem);
+  transition: transform 0.2s;
+ 
+ 
+ 
+}
+
+.about-item img {
+  width: clamp(30px, 10vw, 130px);
+  transition: transform 0.3s ease;
+  transform: rotate(-15deg) scale(1.3); 
+  cursor: var(--custom-pointer) !important;
+}
+
+.about-item:hover img {
+  transform: rotate(-4deg) scale(1.3);
+  
+}
+
+.about-item span {
+  transform: translateY(-1%) translateX(160%) rotate(20deg) scale(1.3);
+   font-size: clamp(0.1rem, 2vw, 1.5rem);
+  transition: transform 0.3s ease;
+}
+
+.about-item:hover span {
+  transform: translateY(-1%) translateX(180%) rotate(35deg) scale(1.3);
+}
+
+/* work ke liye  */
+
+.work-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: clamp(0.7rem, 1.2vw, 1rem);
+  transition: transform 0.2s;
+ 
+ 
+ 
+}
+
+.work-item img {
+  width: clamp(30px, 10vw, 90px);
+  transition: transform 0.3s ease;
+  transform: rotate(-15deg) scale(1.3); 
+  cursor: var(--custom-pointer) !important;
+}
+
+.work-item:hover img {
+  transform: rotate(-4deg) scale(1.3);
+  
+}
+
+.work-item span {
+  transform:  translateY(-9px) translateX(29px) rotate(20deg) scale(1.3);
+  font-size: clamp(0.1rem, 2vw, 1.5rem);
+  transition: transform 0.3s ease;
+}
+
+.work-item:hover span {
+  transform: translateY(-10px) translateX(25px) rotate(0deg) scale(1.3);
+}
+
+
+/* archive ke liye  */
+
+.archive-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: clamp(0.3rem, 0.4vw, 0.9rem);
+  transition: transform 0.2s;
+
+ 
+ 
+}
+
+.archive-item img {
+  width: clamp(30px, 7vw, 90px);
+  transition: transform 0.3s ease;
+  transform: rotate(-15deg) scale(1.3); 
+  cursor: var(--custom-pointer) !important;
+}
+
+.archive-item:hover img {
+  transform: rotate(0deg) scale(1.3);
+  
+}
+
+.archive-item span {
+  transform: translateY(-5px) translateX(35px) rotate(35deg) scale(1.3);
+  font-size: clamp(0.1rem, 2vw, 1.5rem);
+  transition: transform 0.3s ease;
+}
+
+.archive-item:hover span {
+  transform: translateY(-15px) translateX(5px) rotate(0deg) scale(1.3);
+}
+
+/* thoughts ke liye  */
+
+.thoughts-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: clamp(0.7rem, 1.2vw, 1rem);
+  transition: transform 0.2s;
+  
+ 
+ 
+}
+
+.thoughts-item img {
+  width: clamp(30px, 10vw, 90px);
+  transition: transform 0.3s ease;
+  transform: rotate(13deg) scale(1.3); 
+  cursor: var(--custom-pointer) !important;
+}
+
+.thoughts-item:hover img {
+  transform: rotate(0deg) scale(1.3);
+  
+}
+
+.thoughts-item span {
+  transform: translateY(-3px) translateX(32px) rotate(14deg) scale(1.3);
+  font-size: clamp(0.1rem, 2vw, 1.5rem);
+  transition: transform 0.3s ease;
+}
+
+.thoughts-item:hover span {
+  transform: translateY(-12px) translateX(2px) rotate(-0deg) scale(1.3);
+}
+
+
+/* mode ke liye  */
+
+.mode-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: clamp(0.7rem, 1.2vw, 1rem);
+  transition: transform 0.2s;
+  
+ 
+ 
+}
+
+.mode-item img {
+  width: clamp(4px, 5vw, 40px);
+  transition: transform 0.3s ease;
+  transform: rotate(10deg) scale(1.3);
+  cursor: var(--custom-pointer) !important;
+}
+
+.mode-item:hover img {
+  transform: rotate(-4deg) scale(1.3);
+  
+  
+}
+
+.mode-item span {
+  transform: translateX(5px) translateY(-15px) rotate(2deg) scale(1.3);
+  font-size: clamp(0.1rem, 2vw, 1.5rem);
+  transition: transform 0.3s ease;
+}
+
+.mode-item:hover span {
+  transform:  translateX(10px) translateY(-15px) rotate(12deg) scale(1.3);
+}
+
+
+/* === DARK MODE === */
+body.dark-mode {
+  background-color:#42005a;
+  color: #3fffd3;
+  cursor: none;
+}
+
+/* === LIGHT MODE === */
+body.light-mode {
+  background-color: #cef565;
+  color: #42005a;
+  cursor: none;
+}
+
+/* Headings ke liye optional (agar JS se set nahi karna chahte ho) */
+body.light-mode h1,
+body.light-mode h2 {
+  color: #42005a;
+}
+
+
+/* === HEADINGS === */
+h1 {
+  font-size: clamp(2rem, 10vw, 9rem);
+  margin: 20px 0;
+  transform: scaleY(1.5);
+}
+
+h2 {
+  margin: 20px 0;
+  font-size: clamp(1rem, 4vw, 2rem);
+}
+
+/* === GLITCH EFFECT HEADING 1=== */
+.name-glitch {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(2rem, 15vw, 15rem);
+  color: #38f4c0;
+  position: relative;
+  margin: 0;
+  letter-spacing: -0.005vw;
+  cursor: var(--custom-default-cursor);
+}
+.name-glitch::before {
+  content: "JITENDRA SAINI";
+  position: absolute;
+  inset: 0;
+  color: transparent;
+  -webkit-text-stroke: 1px #38f4c0;
+  transform: translate(0.5%,4%);
+  z-index: -1;
+}
+
+/* === GLITCH EFFECT HEADING 2=== */
+
+.name-glitch-2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(1rem, 5vw, 5rem);
+  -webkit-text-stroke: 1px #38f4c0;
+  position: relative;
+  color:  #42005a;
+  margin: 0;
+  letter-spacing: -0.002vw;
+  cursor: var(--custom-default-cursor);
+}
+.name-glitch-2::before {
+content: "PYTHON  DEVELOPER";
+  position: absolute;
+  inset: 0;
+  color: #38f4c0;
+  transform: translate(0.5%, 4%);
+  z-index: -1;
+}
+
+/* === FOOTER NOTE === */
+.footer-note {
+  font-style: italic;
+  font-size: clamp(0.7rem, 1vw, 1rem);
+  color: #aaa;
+  text-align: center;
+  margin-top: 20px;
+  bottom: 0%;
+}
+
+/* bottom_menu ke liye hai ye line  */
+
+.Bottom-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 2rem;
+}
+
+
+.left-bottom-menus {
+  display: flex;
+  align-items: center;
+  /* gap: clamp(0.5rem, 8vw, 9rem); */
+  font-size: clamp(0.7rem, 5vw, 5rem);
+}
+
+.right-bottom-menus {
+  display: flex;
+  align-items: center;
+  /* gap: clamp(0.5rem, 8vw, 9rem); */
+  flex-wrap: wrap;
+}
+
+
+
+
+
+/* === EMAIL === */
+.paperplane {
+  position: absolute;
+  left: 10%;
+  bottom: 10%;
+  text-align: center;
+  
+}
+.paperplane img {
+  width: clamp(2rem, 10vw, 10rem);
+  transition: transform 0.3s ease;
+  transform: rotate(15deg)  scale(1.3);
+  cursor: var(--custom-pointer) ;
+}
+.paperplane:hover img {
+  transform: rotate(2deg)  scale(1.3);
+}
+.paperplane p {
+  font-size: clamp(0.1rem, 2vw, 1.5rem);
+  margin-top: 5px;
+  transition: transform 0.3s ease;
+   transform:translateY(10px)  translateX(22px) rotate(13deg) scale(1.3);
+}
+.paperplane:hover p {
+  transform: translateY(10px) translateX(2px) rotate(0deg) scale(1.3);
+}
+
+
+
+
+/* === Audio ke liye === */
+
+.bars {
+  display: flex;
+  gap: 0.2vw;
+  cursor: none;
+  align-items: center;
+  height: 20vh;
+  width: 100%;
+  cursor: var(--custom-pointer) ;
+}
+
+    .bars__item {
+      width: 0.2vw;
+      height: 3vh;
+      border-radius: 5px;
+      background-size: 200% 200%;
+      transform-origin: center;
+      animation: scalePlay 1s ease-out infinite, colorShift 4s linear infinite;
+      animation-play-state: paused;
+    }
+
+    .bars.playing .bars__item,
+    .bars.autoStart .bars__item {
+      animation-play-state: running;
+    }
+
+    /* Delay setup */
+    .bars__item:nth-child(1) { animation-delay: 0s, 0s; }
+    .bars__item:nth-child(2) { animation-delay: 0.2s, 0.2s; }
+    .bars__item:nth-child(3) { animation-delay: 0.4s, 0.4s; }
+    .bars__item:nth-child(4) { animation-delay: 0.6s, 0.6s; }
+    .bars__item:nth-child(5) { animation-delay: 0.3s, 0.3s; }
+    .bars__item:nth-child(6) { animation-delay: 0.5s, 0.5s; }
+    .bars__item:nth-child(7) { animation-delay: 0.1s, 0.1s; }
+    .bars__item:nth-child(8) { animation-delay: 0.7s, 0.7s; }
+
+    @keyframes scalePlay {
+      0%   { transform: scaleY(0.3); }
+      25%  { transform: scaleY(1.4); }
+      50%  { transform: scaleY(1); }
+      75%  { transform: scaleY(2); }
+      100% { transform: scaleY(0.3); }
+    }
+
+    @keyframes colorShift {
+      0%   { background-image: linear-gradient(to top, #ff0055, #ffcc00); }
+      25%  { background-image: linear-gradient(to top, #ffcc00, #00ffcc); }
+      50%  { background-image: linear-gradient(to top, #00ffcc, #6600ff); }
+      75%  { background-image: linear-gradient(to top, #6600ff, #ff0055); }
+      100% { background-image: linear-gradient(to top, #ff0055, #ffcc00); }
+    }
+
+    @media (max-width: 600px) {
+      .bars__item {
+        width: 0.2vw;
+        height: 3vh;
+      }
+
+      .bars {
+        gap: 0.4vw;
+      }
+    }
+
+
+/* === RESPONSIVE MOBILE === */
+@media (max-width: 600px) {
+  .border-wrapper {
+    width: calc(100% - 20px);
+    height: calc(100vh - 20px);
+    border-width: 1px;
+  }
+
+  .container {
+    margin: 10px;
+    padding: 20px;
+  }
+
+  .paperplane,
+  .about-item
+  .drpepper {
+    position: static;
+    rotate: 0deg;
+    margin-top: 30px;
+  }
+}
+
+
+
+/* === LIGHT MODE === */
+body.light-mode {
+  background-color: #cef565;
+  color: #4000f5;
+}
+
+body.light-mode .border-wrapper {
+  border-color: #4000f5;
+}
+
+body.light-mode .name-glitch {
+  color: #4000f5;
+}
+
+body.light-mode .name-glitch::before {
+  -webkit-text-stroke: 1px #4000f5;
+}
+
+body.light-mode .name-glitch-2 {
+  color:#cef565;
+  -webkit-text-stroke: 1px #4000f5;
+}
+
+body.light-mode .name-glitch-2::before {
+  color: #4000f5;
+}
