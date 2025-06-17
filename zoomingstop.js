@@ -6,18 +6,5 @@
     }
   });
 
-  // Ctrl + mouse wheel zoom block
-  window.addEventListener("wheel", function (e) {
-    if (e.ctrlKey) {
-      e.preventDefault();
-      console.log("🔒 Ctrl+Scroll zoom blocked");
-    }
-  }, { passive: false });
 
-  // Mobile pinch zoom block
-  ['gesturestart', 'gesturechange', 'gestureend'].forEach(function(evt) {
-    document.addEventListener(evt, function(e) {
-      e.preventDefault();
-    });
-  });
 
