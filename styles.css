@@ -178,7 +178,7 @@ body{
 }
 
 .work-item:hover span {
-  transform: translateY(-10px) translateX(25px) rotate(0deg) scale(1.5);
+  transform: translateY(-15px) translateX(25px) rotate(0deg) scale(1.5);
 }
 
 
@@ -214,7 +214,7 @@ body{
 }
 
 .archive-item:hover span {
-  transform: translateY(-15px) translateX(5px) rotate(0deg) scale(1.5);
+  transform: translateY(-30px) translateX(5px) rotate(0deg) scale(1.5);
 }
 
 /* thoughts ke liye  */
@@ -249,7 +249,7 @@ body{
 }
 
 .thoughts-item:hover span {
-  transform: translateY(-12px) translateX(2px) rotate(-0deg) scale(1.5);
+  transform: translateY(-18px) translateX(2px) rotate(-0deg) scale(1.5);
 }
 
 
@@ -286,7 +286,7 @@ body{
 }
 
 .mode-item:hover span {
-  transform:  translateX(10px) translateY(-15px) rotate(12deg) scale(1.5);
+  transform:  translateX(10px) translateY(-17px) rotate(12deg) scale(1.5);
 }
 
 
