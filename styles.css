@@ -127,23 +127,23 @@ body{
 .about-item img {
   width: clamp(30px, 10vw, 130px);
   transition: transform 0.3s ease;
-  transform: rotate(-15deg) scale(1.3); 
+  transform: rotate(-15deg) scale(1.5); 
   cursor: var(--custom-pointer) !important;
 }
 
 .about-item:hover img {
-  transform: rotate(-4deg) scale(1.3);
+  transform: rotate(-4deg) scale(1.5);
   
 }
 
 .about-item span {
-  transform: translateY(-1%) translateX(160%) rotate(20deg) scale(1.3);
+  transform: translateY(-1%) translateX(160%) rotate(20deg) scale(1.5);
    font-size: clamp(0.1rem, 2vw, 1.5rem);
   transition: transform 0.3s ease;
 }
 
 .about-item:hover span {
-  transform: translateY(-1%) translateX(180%) rotate(35deg) scale(1.3);
+  transform: translateY(-1%) translateX(180%) rotate(35deg) scale(1.5);
 }
 
 /* work ke liye  */
@@ -162,23 +162,23 @@ body{
 .work-item img {
   width: clamp(30px, 10vw, 90px);
   transition: transform 0.3s ease;
-  transform: rotate(-15deg) scale(1.3); 
+  transform: rotate(-15deg) scale(1.5); 
   cursor: var(--custom-pointer) !important;
 }
 
 .work-item:hover img {
-  transform: rotate(-4deg) scale(1.3);
+  transform: rotate(-4deg) scale(1.5);
   
 }
 
 .work-item span {
-  transform:  translateY(-9px) translateX(29px) rotate(20deg) scale(1.3);
+  transform:  translateY(-9px) translateX(29px) rotate(20deg) scale(1.5);
   font-size: clamp(0.1rem, 2vw, 1.5rem);
   transition: transform 0.3s ease;
 }
 
 .work-item:hover span {
-  transform: translateY(-10px) translateX(25px) rotate(0deg) scale(1.3);
+  transform: translateY(-10px) translateX(25px) rotate(0deg) scale(1.5);
 }
 
 
@@ -198,23 +198,23 @@ body{
 .archive-item img {
   width: clamp(30px, 7vw, 90px);
   transition: transform 0.3s ease;
-  transform: rotate(-15deg) scale(1.3); 
+  transform: rotate(-15deg) scale(1.5); 
   cursor: var(--custom-pointer) !important;
 }
 
 .archive-item:hover img {
-  transform: rotate(0deg) scale(1.3);
+  transform: rotate(0deg) scale(1.5);
   
 }
 
 .archive-item span {
-  transform: translateY(-5px) translateX(35px) rotate(35deg) scale(1.3);
+  transform: translateY(-5px) translateX(35px) rotate(35deg) scale(1.5);
   font-size: clamp(0.1rem, 2vw, 1.5rem);
   transition: transform 0.3s ease;
 }
 
 .archive-item:hover span {
-  transform: translateY(-15px) translateX(5px) rotate(0deg) scale(1.3);
+  transform: translateY(-15px) translateX(5px) rotate(0deg) scale(1.5);
 }
 
 /* thoughts ke liye  */
@@ -233,23 +233,23 @@ body{
 .thoughts-item img {
   width: clamp(30px, 10vw, 90px);
   transition: transform 0.3s ease;
-  transform: rotate(13deg) scale(1.3); 
+  transform: rotate(13deg) scale(1.5); 
   cursor: var(--custom-pointer) !important;
 }
 
 .thoughts-item:hover img {
-  transform: rotate(0deg) scale(1.3);
+  transform: rotate(0deg) scale(1.5);
   
 }
 
 .thoughts-item span {
-  transform: translateY(-3px) translateX(32px) rotate(14deg) scale(1.3);
+  transform: translateY(-3px) translateX(32px) rotate(14deg) scale(1.5);
   font-size: clamp(0.1rem, 2vw, 1.5rem);
   transition: transform 0.3s ease;
 }
 
 .thoughts-item:hover span {
-  transform: translateY(-12px) translateX(2px) rotate(-0deg) scale(1.3);
+  transform: translateY(-12px) translateX(2px) rotate(-0deg) scale(1.5);
 }
 
 
@@ -269,24 +269,24 @@ body{
 .mode-item img {
   width: clamp(4px, 5vw, 40px);
   transition: transform 0.3s ease;
-  transform: rotate(10deg) scale(1.3);
+  transform: rotate(10deg) scale(1.5);
   cursor: var(--custom-pointer) !important;
 }
 
 .mode-item:hover img {
-  transform: rotate(-4deg) scale(1.3);
+  transform: rotate(-4deg) scale(1.5);
   
   
 }
 
 .mode-item span {
-  transform: translateX(5px) translateY(-15px) rotate(2deg) scale(1.3);
+  transform: translateX(5px) translateY(-15px) rotate(2deg) scale(1.5);
   font-size: clamp(0.1rem, 2vw, 1.5rem);
   transition: transform 0.3s ease;
 }
 
 .mode-item:hover span {
-  transform:  translateX(10px) translateY(-15px) rotate(12deg) scale(1.3);
+  transform:  translateX(10px) translateY(-15px) rotate(12deg) scale(1.5);
 }
 
 
@@ -414,20 +414,20 @@ content: "PYTHON  DEVELOPER";
 .paperplane img {
   width: clamp(2rem, 10vw, 10rem);
   transition: transform 0.3s ease;
-  transform: rotate(15deg)  scale(1.3);
+  transform: rotate(15deg)  scale(1.5);
   cursor: var(--custom-pointer) ;
 }
 .paperplane:hover img {
-  transform: rotate(2deg)  scale(1.3);
+  transform: rotate(2deg)  scale(1.5);
 }
 .paperplane p {
   font-size: clamp(0.1rem, 2vw, 1.5rem);
   margin-top: 5px;
   transition: transform 0.3s ease;
-   transform:translateY(10px)  translateX(22px) rotate(13deg) scale(1.3);
+   transform:translateY(10px)  translateX(22px) rotate(13deg) scale(1.5);
 }
 .paperplane:hover p {
-  transform: translateY(10px) translateX(2px) rotate(0deg) scale(1.3);
+  transform: translateY(10px) translateX(2px) rotate(0deg) scale(1.5);
 }
 
 
